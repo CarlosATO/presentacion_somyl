@@ -1,0 +1,2554 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evolución Tecnológica Somyl 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #0a0f1e;
+      --navy-2: #0d1530;
+      --navy-3: #111d40;
+      --blue: #1e3a8a;
+      --blue-2: #1d4ed8;
+      --electric: #3b82f6;
+      --emerald: #10b981;
+      --emerald-2: #34d399;
+      --gray-1: #f8fafc;
+      --gray-2: #e2e8f0;
+      --gray-3: #94a3b8;
+      --gray-4: #475569;
+      --white: #ffffff;
+      --red: #ef4444;
+      --amber: #f59e0b;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--gray-1);
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 15, 30, .92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, .07);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+
+    .nav-logo {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--blue-2), var(--electric));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -1px;
+    }
+
+    .nav-brand-text {
+      color: #fff;
+      font-weight: 700;
+      font-size: .95rem;
+      line-height: 1.2;
+    }
+
+    .nav-brand-text span {
+      display: block;
+      font-size: .65rem;
+      color: var(--electric);
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: .25rem;
+    }
+
+    .nav-links a {
+      color: var(--gray-3);
+      font-size: .78rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding: .4rem .8rem;
+      border-radius: 6px;
+      transition: all .2s;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .nav-badge {
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--electric);
+      border: 1px solid rgba(59, 130, 246, .4);
+      padding: .3rem .75rem;
+      border-radius: 99px;
+      background: rgba(59, 130, 246, .08);
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      min-height: 100vh;
+      padding: 100px 2rem 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 50%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      opacity: .04;
+      background-image: linear-gradient(rgba(59, 130, 246, .5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, .5) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-glow-1 {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29, 78, 216, .25) 0%, transparent 70%);
+      top: -200px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    .hero-glow-2 {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16, 185, 129, .15) 0%, transparent 70%);
+      bottom: -100px;
+      left: -50px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(59, 130, 246, .12);
+      border: 1px solid rgba(59, 130, 246, .3);
+      color: var(--electric);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .5rem 1.2rem;
+      border-radius: 99px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--electric);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.3)
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: #fff;
+      letter-spacing: -.03em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--electric);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--electric);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: -.01em;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: #94a3b8;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: linear-gradient(135deg, var(--blue-2), var(--electric));
+      color: #fff;
+      font-weight: 700;
+      font-size: .95rem;
+      padding: .9rem 2.2rem;
+      border-radius: 99px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(59, 130, 246, .4);
+      transition: all .25s;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(59, 130, 246, .55);
+    }
+
+    .hero-cta svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-number {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.03em;
+      line-height: 1;
+    }
+
+    .hero-stat-number span {
+      color: var(--emerald);
+    }
+
+    .hero-stat-label {
+      font-size: .72rem;
+      color: var(--gray-3);
+      margin-top: .4rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 600;
+    }
+
+    /* ─── SECTION HEADERS ─── */
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(59, 130, 246, .1);
+      border: 1px solid rgba(59, 130, 246, .25);
+      color: var(--electric);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .35rem 1rem;
+      border-radius: 99px;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: #0f172a;
+      letter-spacing: -.03em;
+      margin-bottom: 1rem;
+    }
+
+    .section-title em {
+      font-style: normal;
+      color: var(--blue-2);
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--gray-3);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    .divider {
+      width: 56px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue-2), var(--electric));
+      border-radius: 99px;
+      margin: 1.5rem auto 0;
+    }
+
+    /* ─── SECTION 2: TORRE DE CONTROL ─── */
+    #old_torre {
+      background: #fff;
+    }
+
+    .torre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .torre-visual {
+      background: linear-gradient(145deg, var(--navy), var(--navy-3));
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, .07);
+      box-shadow: 0 24px 64px rgba(10, 15, 30, .35);
+    }
+
+    .torre-header {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .torre-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .torre-dot.r {
+      background: #ef4444;
+    }
+
+    .torre-dot.y {
+      background: #f59e0b;
+    }
+
+    .torre-dot.g {
+      background: #22c55e;
+    }
+
+    .torre-title-bar {
+      color: rgba(255, 255, 255, .3);
+      font-size: .72rem;
+      font-family: monospace;
+      margin-left: auto;
+    }
+
+    .data-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .75rem 1rem;
+      border-radius: 10px;
+      margin-bottom: .5rem;
+      border: 1px solid rgba(255, 255, 255, .06);
+      background: rgba(255, 255, 255, .04);
+      transition: all .2s;
+    }
+
+    .data-row:hover {
+      background: rgba(59, 130, 246, .1);
+      border-color: rgba(59, 130, 246, .3);
+    }
+
+    .data-row-label {
+      font-size: .8rem;
+      color: #94a3b8;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+
+    .data-row-label svg {
+      width: 14px;
+      height: 14px;
+      color: var(--electric);
+    }
+
+    .data-row-value {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--emerald-2);
+      font-family: monospace;
+    }
+
+    .data-pulse {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+    }
+
+    .data-pulse::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--emerald);
+      animation: pulse 2s infinite;
+    }
+
+    .torre-badge {
+      margin-top: 1.25rem;
+      padding: .75rem 1rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, .15), rgba(59, 130, 246, .1));
+      border: 1px solid rgba(16, 185, 129, .25);
+      font-size: .78rem;
+      color: var(--emerald-2);
+      font-weight: 600;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .torre-text h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+
+    .torre-text p {
+      color: var(--gray-4);
+      line-height: 1.7;
+      font-size: .95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .key-point {
+      background: #f0f9ff;
+      border-left: 3px solid var(--electric);
+      padding: 1rem 1.25rem;
+      border-radius: 0 10px 10px 0;
+      font-size: .88rem;
+      color: #0f172a;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--emerald), #059669);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .check-icon svg {
+      width: 11px;
+      height: 11px;
+      color: #fff;
+      stroke-width: 3;
+    }
+
+    /* ─── SECTION 3: EL PROBLEMA ─── */
+    #problema {
+      background: var(--gray-1);
+    }
+
+    .contrast-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .contrast-card {
+      border-radius: 20px;
+      padding: 2.25rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s;
+      border: 1px solid transparent;
+    }
+
+    .contrast-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-saas {
+      background: #fff;
+      border-color: #fee2e2;
+      box-shadow: 0 8px 32px rgba(239, 68, 68, .08);
+    }
+
+    .card-custom {
+      background: linear-gradient(145deg, var(--navy), var(--navy-3));
+      border-color: rgba(16, 185, 129, .3);
+      box-shadow: 0 8px 32px rgba(16, 185, 129, .12);
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .35rem .9rem;
+      border-radius: 99px;
+      margin-bottom: 1.25rem;
+    }
+
+    .badge-red {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .badge-green {
+      background: rgba(16, 185, 129, .15);
+      color: var(--emerald-2);
+      border: 1px solid rgba(16, 185, 129, .3);
+    }
+
+    .contrast-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: .5rem;
+      line-height: 1.2;
+    }
+
+    .card-saas h3 {
+      color: #0f172a;
+    }
+
+    .card-custom h3 {
+      color: #fff;
+    }
+
+    .contrast-card .desc {
+      font-size: .85rem;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-saas .desc {
+      color: var(--gray-4);
+    }
+
+    .card-custom .desc {
+      color: #94a3b8;
+    }
+
+    .pain-item,
+    .gain-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      font-size: .85rem;
+      margin-bottom: .8rem;
+      line-height: 1.5;
+    }
+
+    .icon-x {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 50%;
+      background: #fee2e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .icon-x svg {
+      width: 10px;
+      height: 10px;
+      color: #dc2626;
+      stroke-width: 3;
+    }
+
+    .icon-ok {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, .2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .icon-ok svg {
+      width: 10px;
+      height: 10px;
+      color: var(--emerald-2);
+      stroke-width: 3;
+    }
+
+    .pain-item {
+      color: #64748b;
+    }
+
+    .gain-item {
+      color: #94a3b8;
+    }
+
+    .gain-highlight {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--emerald-2);
+    }
+
+    .glow-corner {
+      position: absolute;
+      bottom: -40px;
+      right: -40px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16, 185, 129, .18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ─── SECTION 4: ROI TABLE ─── */
+    #roi {
+      background: #fff;
+    }
+
+    .roi-wrapper {
+      overflow-x: auto;
+      border-radius: 20px;
+      box-shadow: 0 16px 64px rgba(10, 15, 30, .1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+
+    thead tr {
+      background: var(--navy);
+    }
+
+    thead th {
+      padding: 1.1rem 1.4rem;
+      text-align: left;
+      color: rgba(255, 255, 255, .55);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    thead th.highlight {
+      background: var(--blue-2);
+      color: #fff;
+    }
+
+    thead th.highlight2 {
+      background: linear-gradient(90deg, var(--emerald), #059669);
+      color: #fff;
+      text-align: center;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--gray-2);
+      transition: background .15s;
+    }
+
+    tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    tbody td {
+      padding: 1rem 1.4rem;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    tbody td.col-red {
+      color: var(--red);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    tbody td.col-amber {
+      color: var(--amber);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    tbody td.col-green {
+      color: var(--emerald);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    tbody td.col-center {
+      text-align: center;
+      color: #64748b;
+    }
+
+    .conclusion-box {
+      margin-top: 2rem;
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, .08), rgba(59, 130, 246, .08));
+      border: 1px solid rgba(16, 185, 129, .25);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .conclusion-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--emerald), #059669);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .conclusion-icon svg {
+      width: 22px;
+      height: 22px;
+      color: #fff;
+    }
+
+    .conclusion-text {
+      font-size: .95rem;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    .conclusion-text strong {
+      color: var(--emerald);
+    }
+
+    /* ─── SECTION 5: ARQUITECTURA (ERP DIAGRAM) ─── */
+    #situacion-actual {
+      background: #f1f5f9;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #situacion-actual .section-title {
+      color: #0f172a;
+    }
+
+    #situacion-actual .section-subtitle {
+      color: var(--gray-4);
+    }
+
+    #situacion-actual .section-tag {
+      background: rgba(29, 78, 216, .08);
+      border-color: rgba(29, 78, 216, .2);
+      color: var(--blue-2);
+    }
+
+    #situacion-actual .divider {
+      background: linear-gradient(90deg, var(--blue-2), var(--emerald));
+    }
+
+    /* ERP canvas wrapper */
+    .erp-canvas-wrap {
+      position: relative;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      box-shadow: 0 8px 40px rgba(15, 23, 42, .07);
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .erp-canvas-wrap svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Module cards inside SVG via foreignObject → handled inline */
+    .erp-card {
+      border-radius: 14px;
+      background: #fff;
+      border: 1.5px solid #e2e8f0;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, .07);
+      padding: .85rem 1rem .75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .3rem;
+      text-align: center;
+      cursor: default;
+      transition: box-shadow .25s, transform .25s, border-color .25s;
+      height: 100%;
+    }
+
+    .erp-card:hover {
+      box-shadow: 0 8px 32px rgba(15, 23, 42, .14);
+      transform: translateY(-2px);
+    }
+
+    .erp-card.hub {
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      border-color: #1d4ed8;
+    }
+
+    .erp-card.fin {
+      border-color: #10b981;
+    }
+
+    .erp-card.ops {
+      border-color: #3b82f6;
+    }
+
+    .erp-card.log {
+      border-color: #6366f1;
+    }
+
+    .erp-card.flt {
+      border-color: #f59e0b;
+    }
+
+    .erp-card.rrhh {
+      border-color: #a78bfa;
+    }
+
+    .erp-card .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .2rem;
+    }
+
+    .erp-card.hub .card-icon {
+      background: rgba(255, 255, 255, .2);
+    }
+
+    .erp-card.fin .card-icon {
+      background: rgba(16, 185, 129, .12);
+    }
+
+    .erp-card.ops .card-icon {
+      background: rgba(59, 130, 246, .1);
+    }
+
+    .erp-card.log .card-icon {
+      background: rgba(99, 102, 241, .1);
+    }
+
+    .erp-card.flt .card-icon {
+      background: rgba(245, 158, 11, .1);
+    }
+
+    .erp-card.rrhh .card-icon {
+      background: rgba(167, 139, 250, .12);
+    }
+
+    .erp-card .card-title {
+      font-size: .78rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .erp-card.hub .card-title {
+      color: #fff;
+    }
+
+    .erp-card.fin .card-title {
+      color: #065f46;
+    }
+
+    .erp-card.ops .card-title {
+      color: #1e3a8a;
+    }
+
+    .erp-card.log .card-title {
+      color: #312e81;
+    }
+
+    .erp-card.flt .card-title {
+      color: #78350f;
+    }
+
+    .erp-card.rrhh .card-title {
+      color: #4c1d95;
+    }
+
+    .erp-card .card-sub {
+      font-size: .64rem;
+      font-weight: 500;
+    }
+
+    .erp-card.hub .card-sub {
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .erp-card:not(.hub) .card-sub {
+      color: #94a3b8;
+    }
+
+    .arch-desc {
+      margin-top: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(29, 78, 216, .06), rgba(16, 185, 129, .06));
+      border: 1px solid rgba(29, 78, 216, .15);
+      font-size: .88rem;
+      color: #334155;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .arch-desc strong {
+      color: var(--blue-2);
+    }
+
+    /* Architecture tab switcher */
+    .arch-tabs {
+      display: flex;
+      gap: .75rem;
+      margin-bottom: 1.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .arch-tab-btn {
+      padding: .5rem 1.5rem;
+      border-radius: 50px;
+      font-size: .82rem;
+      font-weight: 700;
+      border: 1.5px solid #e2e8f0;
+      background: #fff;
+      color: #475569;
+      cursor: pointer;
+      transition: all .22s;
+      letter-spacing: .01em;
+    }
+
+    .arch-tab-btn:hover {
+      border-color: var(--blue-2);
+      color: var(--blue-2);
+    }
+
+    .arch-tab-btn.active {
+      background: linear-gradient(135deg, var(--blue-2), var(--electric));
+      border-color: var(--blue-2);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(29, 78, 216, .28);
+    }
+
+    .erp-canvas-wrap {
+      display: none;
+    }
+
+    .infra-canvas-wrap {
+      display: none;
+      position: relative;
+      width: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(10, 15, 30, .25);
+    }
+
+    .infra-canvas-wrap svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .erp-canvas-wrap.active,
+    .infra-canvas-wrap.active {
+      display: block;
+    }
+
+    /* ─── SECTION 6: OPCIONES ─── */
+    #opciones {
+      background: var(--gray-1);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .pricing-card {
+      border-radius: 24px;
+      padding: 2.5rem;
+      border: 1px solid transparent;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card-a {
+      background: #fff;
+      border-color: var(--gray-2);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .05);
+    }
+
+    .pricing-card-a:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, .1);
+    }
+
+    .pricing-card-b {
+      background: linear-gradient(145deg, var(--navy), var(--navy-3));
+      border-color: rgba(59, 130, 246, .3);
+      box-shadow: 0 16px 64px rgba(10, 15, 30, .4);
+    }
+
+    .pricing-card-b:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 80px rgba(10, 15, 30, .5);
+    }
+
+    .pricing-recommended {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: linear-gradient(135deg, var(--emerald), #059669);
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .3rem .85rem;
+      border-radius: 99px;
+    }
+
+    .pricing-option {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card-a .pricing-option {
+      color: var(--gray-3);
+    }
+
+    .pricing-card-b .pricing-option {
+      color: var(--electric);
+    }
+
+    .pricing-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 1.75rem;
+    }
+
+    .pricing-card-a .pricing-title {
+      color: #0f172a;
+    }
+
+    .pricing-card-b .pricing-title {
+      color: #fff;
+    }
+
+    .pricing-salary {
+      font-size: 2.6rem;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1;
+    }
+
+    .pricing-card-a .pricing-salary {
+      color: var(--blue-2);
+    }
+
+    .pricing-card-b .pricing-salary {
+      color: #fff;
+    }
+
+    .pricing-salary sup {
+      font-size: 1.1rem;
+      font-weight: 700;
+      vertical-align: super;
+      margin-right: .1em;
+    }
+
+    .pricing-salary-label {
+      font-size: .8rem;
+      margin-top: .3rem;
+    }
+
+    .pricing-card-a .pricing-salary-label {
+      color: var(--gray-3);
+    }
+
+    .pricing-card-b .pricing-salary-label {
+      color: rgba(255, 255, 255, .5);
+    }
+
+    .pricing-divider {
+      height: 1px;
+      margin: 1.75rem 0;
+    }
+
+    .pricing-card-a .pricing-divider {
+      background: var(--gray-2);
+    }
+
+    .pricing-card-b .pricing-divider {
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .pricing-cargo {
+      font-size: .82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 1.25rem;
+    }
+
+    .pricing-card-a .pricing-cargo {
+      color: var(--gray-4);
+    }
+
+    .pricing-card-b .pricing-cargo {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    .pricing-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+    }
+
+    .pricing-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      font-size: .85rem;
+      line-height: 1.55;
+    }
+
+    .pricing-card-a .pricing-list li {
+      color: var(--gray-4);
+    }
+
+    .pricing-card-b .pricing-list li {
+      color: #94a3b8;
+    }
+
+    .pricing-card-b .pricing-list li strong {
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .pill-check {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .pill-check-a {
+      background: #eff6ff;
+    }
+
+    .pill-check-b {
+      background: rgba(16, 185, 129, .2);
+    }
+
+    .pill-check svg {
+      width: 10px;
+      height: 10px;
+      stroke-width: 3;
+    }
+
+    .pill-check-a svg {
+      color: var(--blue-2);
+    }
+
+    .pill-check-b svg {
+      color: var(--emerald-2);
+    }
+
+    .pricing-warning {
+      margin-top: 1.75rem;
+      padding: .9rem 1.1rem;
+      border-radius: 10px;
+      background: rgba(245, 158, 11, .08);
+      border: 1px solid rgba(245, 158, 11, .25);
+      font-size: .78rem;
+      color: #92400e;
+      line-height: 1.55;
+    }
+
+    .pricing-guarantee {
+      margin-top: 1.75rem;
+      padding: .9rem 1.1rem;
+      border-radius: 10px;
+      background: rgba(16, 185, 129, .1);
+      border: 1px solid rgba(16, 185, 129, .25);
+      font-size: .78rem;
+      color: var(--emerald-2);
+      line-height: 1.55;
+    }
+
+    .pricing-glow {
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59, 130, 246, .18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .pricing-card-c {
+      background: #fff;
+      border-color: var(--gray-2);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .05);
+    }
+
+    .pricing-card-c:hover {
+      border-color: #fca5a5;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, .1);
+    }
+
+    .pricing-card-c .pricing-option {
+      color: var(--gray-3);
+    }
+
+    .pricing-card-c .pricing-title {
+      color: #0f172a;
+    }
+
+    .pricing-card-c .pricing-salary {
+      color: #dc2626;
+    }
+
+    .pricing-card-c .pricing-salary-label {
+      color: var(--gray-3);
+    }
+
+    .pricing-card-c .pricing-divider {
+      background: var(--gray-2);
+    }
+
+    .pricing-card-c .pricing-cargo {
+      color: var(--gray-4);
+    }
+
+    .pricing-card-c .pricing-list li {
+      color: var(--gray-4);
+    }
+
+    .pill-check-c {
+      background: #fee2e2;
+    }
+
+    .pill-check-c svg {
+      color: #dc2626;
+    }
+
+    /* ─── SECTION 7: CIERRE ─── */
+    #cierre {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cierre::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: .03;
+      background-image: linear-gradient(rgba(59, 130, 246, .5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, .5) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .cierre-glow {
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59, 130, 246, .12) 0%, transparent 65%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .cierre-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cierre-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 24px;
+      margin: 0 auto 2rem;
+      background: linear-gradient(135deg, var(--blue-2), var(--electric));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 16px 48px rgba(59, 130, 246, .4);
+    }
+
+    .cierre-icon svg {
+      width: 40px;
+      height: 40px;
+      color: #fff;
+    }
+
+    .cierre-tag {
+      display: inline-block;
+      background: rgba(16, 185, 129, .12);
+      border: 1px solid rgba(16, 185, 129, .3);
+      color: var(--emerald-2);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .35rem 1rem;
+      border-radius: 99px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cierre-title {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .cierre-title em {
+      font-style: normal;
+      color: var(--electric);
+    }
+
+    .cierre-desc {
+      font-size: 1rem;
+      color: #94a3b8;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .cierre-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: linear-gradient(135deg, var(--blue-2), var(--electric));
+      color: #fff;
+      font-weight: 700;
+      font-size: .9rem;
+      padding: .9rem 2rem;
+      border-radius: 99px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(59, 130, 246, .35);
+      transition: all .25s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 48px rgba(59, 130, 246, .5);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: transparent;
+      color: var(--electric);
+      font-weight: 700;
+      font-size: .9rem;
+      padding: .9rem 2rem;
+      border-radius: 99px;
+      text-decoration: none;
+      border: 1px solid rgba(59, 130, 246, .35);
+      cursor: pointer;
+      transition: all .25s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(59, 130, 246, .1);
+      border-color: var(--electric);
+    }
+
+    .cierre-footnote {
+      margin-top: 3.5rem;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .2);
+      letter-spacing: .08em;
+    }
+
+    .cierre-divider {
+      width: 1px;
+      height: 16px;
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .cierre-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ─── SCROLL INDICATOR ─── */
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-2), var(--electric), var(--emerald));
+      z-index: 200;
+      transition: width .1s linear;
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* ─── FADE IN ON SCROLL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: .1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: .2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: .3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: .4s;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 90px 1.25rem 60px;
+      }
+
+      .torre-grid,
+      .contrast-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        gap: 2rem;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gray-2);
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gray-3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scroll-indicator" id="scrollProgress"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">
+      <div class="nav-logo">S</div>
+      <div class="nav-brand-text">
+        Somyl Digital
+        <span>Pitch Deck 2026</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#situacion-actual">Situación Actual</a>
+      <a href="#problema">El Problema</a>
+      <a href="#roi">ROI</a>
+      <a href="#opciones">Propuesta</a>
+    </div>
+    <div class="nav-badge">Marzo 2026</div>
+  </nav>
+
+  <!-- ═══ SECCIÓN 1: HERO ═══ -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Estrategia de Transformación Digital</div>
+        <h1 class="hero-title">
+          Modulos Tecnológicos<br />
+          y Operativos para <em>Somyl 2026</em>
+        </h1>
+        <p class="hero-subtitle">Propuesta tecnologica integral Somyl. S.A..</p>
+        <p class="hero-desc">
+          Presentación de la estrategia de sistemas y consolidación del ecosistema de gestión integral.
+          Una hoja de ruta para blindar la operación de Somyl con tecnología 100% propia, ágil y sin costos de
+          licenciamiento externo.
+        </p>
+        <a href="#situacion-actual" class="hero-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+          Explorar la propuesta
+        </a>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number"><span>$11M+</span></div>
+            <div class="hero-stat-label">Ahorro proyectado año 1</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">5 + <span>Módulos</span></div>
+            <div class="hero-stat-label">Ecosistema integrado</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number"><span>100%</span></div>
+            <div class="hero-stat-label">Propiedad intelectual</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">∞ <span>Usuarios</span></div>
+            <div class="hero-stat-label">Sin costo por licencia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECCIÓN 2: SITUACIÓN ACTUAL (ECOSISTEMA) ═══ -->
+  <section id="situacion-actual">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Situación Actual</span>
+        <h2 class="section-title">Ecosistema <em>Operativo Somyl</em></h2>
+        <p class="section-subtitle">Cómo operamos hoy: el ecosistema Somyl no son módulos aislados — es un organismo
+          interconectado desarrollado a medida donde cada dato fluye hacia donde se necesita.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="arch-tabs reveal">
+        <button class="arch-tab-btn active" data-target="erp-diagram">&#128279; Flujo Operativo ERP</button>
+        <button class="arch-tab-btn" data-target="infra-diagram">&#128447; Infraestructura T&#233;cnica</button>
+      </div>
+
+      <div id="erp-diagram" class="erp-canvas-wrap active reveal reveal-delay-1">
+        <!-- SVG ERP Ecosystem — fixed layout, 4 modules row 2 + OPS row 3 -->
+        <svg viewBox="0 0 1200 640" xmlns="http://www.w3.org/2000/svg" style="font-family:'Inter',sans-serif;">
+          <defs>
+            <!-- Arrow markers (e- prefix = ERP diagram) -->
+            <marker id="e-arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6" />
+            </marker>
+            <marker id="e-arr-emerald" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#10b981" />
+            </marker>
+            <marker id="e-arr-indigo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#6366f1" />
+            </marker>
+            <marker id="e-arr-amber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b" />
+            </marker>
+            <marker id="e-arr-purple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#a78bfa" />
+            </marker>
+            <pattern id="e-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="0.6" />
+            </pattern>
+            <filter id="e-card-shadow" x="-10%" y="-10%" width="120%" height="130%">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(15,23,42,.1)" />
+            </filter>
+            <filter id="e-hub-shadow" x="-15%" y="-15%" width="130%" height="140%">
+              <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="rgba(29,78,216,.35)" />
+            </filter>
+            <linearGradient id="e-hub-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1d4ed8" />
+              <stop offset="100%" stop-color="#3b82f6" />
+            </linearGradient>
+          </defs>
+
+          <!-- Background -->
+          <rect width="1200" height="640" fill="#f8fafc" rx="20" />
+          <rect width="1200" height="640" fill="url(#e-grid)" rx="20" />
+
+          <!-- ── CONNECTIONS (drawn behind cards) ── -->
+
+          <!-- Hub → FIN -->
+          <path d="M 490,148 C 490,186 217,206 217,230" fill="none" stroke="#3b82f6" stroke-width="1.8"
+            stroke-dasharray="5,3" marker-end="url(#e-arr-blue)" opacity=".8" />
+          <rect x="262" y="177" width="98" height="18" rx="9" fill="#eff6ff" />
+          <text x="311" y="189" text-anchor="middle" fill="#1d4ed8" font-size="9" font-weight="700">Identidad /
+            Roles</text>
+
+          <!-- Hub → LOG -->
+          <path d="M 548,148 C 548,186 472,206 472,230" fill="none" stroke="#3b82f6" stroke-width="1.8"
+            stroke-dasharray="5,3" marker-end="url(#e-arr-blue)" opacity=".8" />
+          <rect x="462" y="177" width="82" height="18" rx="9" fill="#eff6ff" />
+          <text x="503" y="189" text-anchor="middle" fill="#1d4ed8" font-size="9" font-weight="700">Sesión / Auth</text>
+
+          <!-- Hub → OPS (vertical center line) -->
+          <path d="M 600,148 C 600,210 600,415 600,445" fill="none" stroke="#3b82f6" stroke-width="1.6"
+            stroke-dasharray="5,3" marker-end="url(#e-arr-blue)" opacity=".55" />
+          <rect x="606" y="288" width="82" height="18" rx="9" fill="#eff6ff" />
+          <text x="647" y="300" text-anchor="middle" fill="#1d4ed8" font-size="9" font-weight="700">Access Token</text>
+
+          <!-- Hub → FLT -->
+          <path d="M 652,148 C 652,186 727,206 727,230" fill="none" stroke="#3b82f6" stroke-width="1.8"
+            stroke-dasharray="5,3" marker-end="url(#e-arr-blue)" opacity=".8" />
+          <rect x="648" y="177" width="76" height="18" rx="9" fill="#eff6ff" />
+          <text x="686" y="189" text-anchor="middle" fill="#1d4ed8" font-size="9" font-weight="700">Permisos</text>
+
+          <!-- Hub → RRHH -->
+          <path d="M 710,148 C 710,186 982,206 982,230" fill="none" stroke="#3b82f6" stroke-width="1.8"
+            stroke-dasharray="5,3" marker-end="url(#e-arr-blue)" opacity=".8" />
+          <rect x="838" y="177" width="98" height="18" rx="9" fill="#eff6ff" />
+          <text x="887" y="189" text-anchor="middle" fill="#1d4ed8" font-size="9" font-weight="700">Roles /
+            Permisos</text>
+
+          <!-- FLT → LOG lateral (mid-height y=285) — Soporte Despacho -->
+          <path d="M 727,285 C 692,263 508,263 472,285" fill="none" stroke="#f59e0b" stroke-width="1.8"
+            marker-end="url(#e-arr-amber)" />
+          <rect x="557" y="255" width="96" height="18" rx="9" fill="#fffbeb" />
+          <text x="605" y="267" text-anchor="middle" fill="#78350f" font-size="9" font-weight="700">Soporte
+            Despacho</text>
+
+          <!-- FIN → OPS — Presupuestos Autorizados -->
+          <path d="M 217,340 C 217,408 545,425 555,445" fill="none" stroke="#10b981" stroke-width="2"
+            marker-end="url(#e-arr-emerald)" />
+          <rect x="244" y="398" width="118" height="18" rx="9" fill="#ecfdf5" />
+          <text x="303" y="410" text-anchor="middle" fill="#065f46" font-size="9" font-weight="700">Presup.
+            Autorizados</text>
+
+          <!-- LOG → OPS — Materiales a Terreno -->
+          <path d="M 472,340 C 472,393 562,422 568,445" fill="none" stroke="#6366f1" stroke-width="2"
+            marker-end="url(#e-arr-indigo)" />
+          <rect x="454" y="388" width="88" height="18" rx="9" fill="#eef2ff" />
+          <text x="498" y="400" text-anchor="middle" fill="#312e81" font-size="9" font-weight="700">Mat. a
+            Terreno</text>
+
+          <!-- FLT → OPS — Maquinaria -->
+          <path d="M 727,340 C 727,393 638,422 632,445" fill="none" stroke="#f59e0b" stroke-width="2"
+            marker-end="url(#e-arr-amber)" />
+          <rect x="664" y="388" width="88" height="18" rx="9" fill="#fffbeb" />
+          <text x="708" y="400" text-anchor="middle" fill="#78350f" font-size="9" font-weight="700">Maquinaria /
+            Flota</text>
+
+          <!-- RRHH → OPS — Cuadrillas -->
+          <path d="M 982,340 C 982,408 655,425 645,445" fill="none" stroke="#a78bfa" stroke-width="2"
+            marker-end="url(#e-arr-purple)" />
+          <rect x="828" y="402" width="82" height="18" rx="9" fill="#f5f3ff" />
+          <text x="869" y="414" text-anchor="middle" fill="#4c1d95" font-size="9" font-weight="700">Cuadrillas</text>
+
+          <!-- OPS → FIN — Costos / Avance EP -->
+          <path d="M 555,445 C 528,396 200,394 178,340" fill="none" stroke="#3b82f6" stroke-width="1.8"
+            stroke-dasharray="4,3" marker-end="url(#e-arr-blue)" />
+          <rect x="296" y="418" width="76" height="18" rx="9" fill="#eff6ff" />
+          <text x="334" y="430" text-anchor="middle" fill="#1d4ed8" font-size="9" font-weight="700">Costos / EP</text>
+
+          <!-- ── MODULE CARDS ── -->
+
+          <!-- HUB: Panel de Accesos SSO -->
+          <g filter="url(#e-hub-shadow)">
+            <rect x="420" y="40" width="360" height="108" rx="16" fill="url(#e-hub-grad)" />
+            <rect x="455" y="57" width="40" height="40" rx="12" fill="rgba(255,255,255,.18)" />
+            <path d="M475,62 L475,62 L487,67 L487,75 C487,81 481.5,86 475,89 C468.5,86 463,81 463,75 L463,67 Z"
+              fill="none" stroke="white" stroke-width="1.8" />
+            <text x="600" y="79" text-anchor="middle" fill="white" font-size="14" font-weight="800">Panel de
+              Accesos</text>
+            <text x="600" y="97" text-anchor="middle" fill="rgba(255,255,255,.8)" font-size="10.5" font-weight="600">SSO
+              &amp; IAM — Identidad, Seguridad y Roles</text>
+            <rect x="492" y="112" width="216" height="20" rx="10" fill="rgba(255,255,255,.15)" />
+            <text x="600" y="126" text-anchor="middle" fill="rgba(255,255,255,.9)" font-size="9" font-weight="700">HUB
+              ORQUESTADOR · GOBIERNO CENTRAL</text>
+          </g>
+
+          <!-- FIN: Órdenes de Pago (row 2 far-left) -->
+          <g filter="url(#e-card-shadow)">
+            <rect x="130" y="230" width="175" height="110" rx="14" fill="white" stroke="#10b981" stroke-width="1.5" />
+            <rect x="148" y="246" width="36" height="36" rx="10" fill="rgba(16,185,129,.12)" />
+            <text x="166" y="269" text-anchor="middle" fill="#10b981" font-size="19" font-weight="900">$</text>
+            <text x="253" y="263" text-anchor="middle" fill="#065f46" font-size="10.5" font-weight="800">Órdenes de
+              Pago</text>
+            <text x="253" y="277" text-anchor="middle" fill="#10b981" font-size="9" font-weight="700">Procurement</text>
+            <line x1="148" y1="289" x2="297" y2="289" stroke="#d1fae5" stroke-width="1" />
+            <text x="217" y="303" text-anchor="middle" fill="#6b7280" font-size="8.5">Requerimientos ·
+              Presupuestos</text>
+            <text x="217" y="317" text-anchor="middle" fill="#6b7280" font-size="8.5">Aprobación · Proveedores</text>
+          </g>
+
+          <!-- LOG: Logística (row 2 center-left) -->
+          <g filter="url(#e-card-shadow)">
+            <rect x="385" y="230" width="175" height="110" rx="14" fill="white" stroke="#6366f1" stroke-width="1.5" />
+            <rect x="402" y="246" width="36" height="36" rx="10" fill="rgba(99,102,241,.1)" />
+            <rect x="407" y="255" width="16" height="12" rx="2" fill="none" stroke="#6366f1" stroke-width="1.5" />
+            <path d="M423,258 L430,258 L433,265 L433,267 L423,267 Z" fill="none" stroke="#6366f1" stroke-width="1.5" />
+            <circle cx="412" cy="270" r="2.5" fill="#6366f1" />
+            <circle cx="429" cy="270" r="2.5" fill="#6366f1" />
+            <text x="500" y="263" text-anchor="middle" fill="#312e81" font-size="10.5"
+              font-weight="800">Logística</text>
+            <text x="500" y="277" text-anchor="middle" fill="#6366f1" font-size="9" font-weight="700">WMS &amp;
+              Despachos</text>
+            <line x1="402" y1="289" x2="552" y2="289" stroke="#e0e7ff" stroke-width="1" />
+            <text x="472" y="303" text-anchor="middle" fill="#6b7280" font-size="8.5">Ingresos · Despachos</text>
+            <text x="472" y="317" text-anchor="middle" fill="#6b7280" font-size="8.5">Materiales a terreno</text>
+          </g>
+
+          <!-- FLT: Flota (row 2 center-right) -->
+          <g filter="url(#e-card-shadow)">
+            <rect x="640" y="230" width="175" height="110" rx="14" fill="white" stroke="#f59e0b" stroke-width="1.5" />
+            <rect x="657" y="246" width="36" height="36" rx="10" fill="rgba(245,158,11,.1)" />
+            <circle cx="675" cy="258" r="5" fill="none" stroke="#f59e0b" stroke-width="1.5" />
+            <path d="M675,263 L675,272" stroke="#f59e0b" stroke-width="1.5" />
+            <text x="762" y="263" text-anchor="middle" fill="#78350f" font-size="10.5" font-weight="800">Flota</text>
+            <text x="762" y="277" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="700">Telemática &amp;
+              Mantención</text>
+            <line x1="657" y1="289" x2="807" y2="289" stroke="#fef3c7" stroke-width="1" />
+            <text x="727" y="303" text-anchor="middle" fill="#6b7280" font-size="8.5">GPS · Control Combustible</text>
+            <text x="727" y="317" text-anchor="middle" fill="#6b7280" font-size="8.5">Mantención Preventiva</text>
+          </g>
+
+          <!-- RRHH: Recursos Humanos (row 2 far-right) -->
+          <g filter="url(#e-card-shadow)">
+            <rect x="895" y="230" width="175" height="110" rx="14" fill="white" stroke="#a78bfa" stroke-width="1.5" />
+            <rect x="912" y="246" width="36" height="36" rx="10" fill="rgba(167,139,250,.12)" />
+            <circle cx="922" cy="256" r="4" fill="none" stroke="#a78bfa" stroke-width="1.5" />
+            <path d="M915,269 C915,264 929,264 929,269" fill="none" stroke="#a78bfa" stroke-width="1.5" />
+            <circle cx="933" cy="258" r="3.5" fill="none" stroke="#a78bfa" stroke-width="1.3" />
+            <path d="M927,269 C927,265 939,265 939,269" fill="none" stroke="#a78bfa" stroke-width="1.3" />
+            <text x="1010" y="263" text-anchor="middle" fill="#4c1d95" font-size="10.5" font-weight="800">Recursos
+              Humanos</text>
+            <text x="1010" y="277" text-anchor="middle" fill="#a78bfa" font-size="9" font-weight="700">Asistencia &amp;
+              Nómina</text>
+            <line x1="912" y1="289" x2="1062" y2="289" stroke="#ede9fe" stroke-width="1" />
+            <text x="982" y="303" text-anchor="middle" fill="#6b7280" font-size="8.5">Asistencia · Cuadrillas</text>
+            <text x="982" y="317" text-anchor="middle" fill="#6b7280" font-size="8.5">Nómina · Horas-Hombre</text>
+          </g>
+
+          <!-- OPS: Producción (row 3 — center anchor of all ops data) -->
+          <g filter="url(#e-card-shadow)">
+            <rect x="512" y="445" width="176" height="112" rx="14" fill="white" stroke="#3b82f6" stroke-width="2" />
+            <rect x="530" y="461" width="36" height="36" rx="10" fill="rgba(59,130,246,.1)" />
+            <rect x="536" y="468" width="10" height="14" rx="2" fill="none" stroke="#3b82f6" stroke-width="1.5" />
+            <rect x="549" y="472" width="10" height="10" rx="2" fill="none" stroke="#3b82f6" stroke-width="1.5" />
+            <text x="618" y="479" text-anchor="middle" fill="#1e3a8a" font-size="11" font-weight="800">Producción</text>
+            <text x="618" y="493" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700">Control de
+              Gestión</text>
+            <line x1="530" y1="504" x2="680" y2="504" stroke="#dbeafe" stroke-width="1" />
+            <text x="600" y="518" text-anchor="middle" fill="#6b7280" font-size="8.5">Avance Obra / EP · Costos</text>
+            <text x="600" y="531" text-anchor="middle" fill="#6b7280" font-size="8.5">Asignación Personal ·
+              Materiales</text>
+          </g>
+
+          <!-- ── LEGEND ── -->
+          <rect x="50" y="578" width="1100" height="48" rx="10" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+          <line x1="70" y1="602" x2="94" y2="602" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,3"
+            marker-end="url(#e-arr-blue)" />
+          <text x="100" y="606" fill="#475569" font-size="9" font-weight="600">Identidad / SSO</text>
+          <line x1="202" y1="602" x2="226" y2="602" stroke="#10b981" stroke-width="2"
+            marker-end="url(#e-arr-emerald)" />
+          <text x="232" y="606" fill="#475569" font-size="9" font-weight="600">Flujo Financiero</text>
+          <line x1="340" y1="602" x2="364" y2="602" stroke="#6366f1" stroke-width="2" marker-end="url(#e-arr-indigo)" />
+          <text x="370" y="606" fill="#475569" font-size="9" font-weight="600">Supply Chain</text>
+          <line x1="468" y1="602" x2="492" y2="602" stroke="#f59e0b" stroke-width="2" marker-end="url(#e-arr-amber)" />
+          <text x="498" y="606" fill="#475569" font-size="9" font-weight="600">Activos / Flota</text>
+          <line x1="588" y1="602" x2="612" y2="602" stroke="#a78bfa" stroke-width="2" marker-end="url(#e-arr-purple)" />
+          <text x="618" y="606" fill="#475569" font-size="9" font-weight="600">Capital Humano</text>
+          <text x="820" y="600" fill="#94a3b8" font-size="8" font-weight="500">ERP Modular Nativo · Somyl Digital
+            2026</text>
+          <text x="820" y="613" fill="#94a3b8" font-size="8" font-weight="500">Supabase · PostgreSQL · JWT · REST
+            API</text>
+        </svg>
+      </div><!-- /erp-diagram -->
+
+      <!-- DIAGRAM 2: Infrastructure Stack -->
+      <div id="infra-diagram" class="infra-canvas-wrap reveal reveal-delay-1">
+        <svg viewBox="0 0 1100 580" xmlns="http://www.w3.org/2000/svg" style="font-family:'Inter',sans-serif;">
+          <defs>
+            <!-- Dark arrow markers -->
+            <marker id="i-arr-wh" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="rgba(255,255,255,.75)" />
+            </marker>
+            <marker id="i-arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#60a5fa" />
+            </marker>
+            <marker id="i-arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#34d399" />
+            </marker>
+            <filter id="i-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="rgba(59,130,246,.4)" />
+            </filter>
+            <filter id="i-card" x="-10%" y="-10%" width="120%" height="130%">
+              <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="rgba(0,0,0,.4)" />
+            </filter>
+            <pattern id="i-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="10" cy="10" r="0.8" fill="#1e2d4a" />
+            </pattern>
+          </defs>
+
+          <!-- Dark background -->
+          <rect width="1100" height="580" fill="#0d1530" rx="20" />
+          <rect width="1100" height="580" fill="url(#i-dots)" rx="20" />
+
+          <!-- ── LAYER 1: USUARIO ── -->
+          <g filter="url(#i-glow)">
+            <rect x="400" y="22" width="300" height="56" rx="12" fill="#132650" stroke="#3b82f6" stroke-width="1.5" />
+          </g>
+          <text x="550" y="44" text-anchor="middle" fill="white" font-size="10" font-weight="800"
+            letter-spacing=".05em">USUARIO CORPORATIVO</text>
+          <text x="550" y="62" text-anchor="middle" fill="#60a5fa" font-size="9.5" font-weight="600">Cualquier
+            dispositivo · Navegador seguro</text>
+
+          <!-- Arrow L1 → L2 -->
+          <path d="M 550,78 L 550,118" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.8"
+            marker-end="url(#i-arr-wh)" />
+          <rect x="512" y="90" width="76" height="16" rx="8" fill="rgba(59,130,246,.18)" />
+          <text x="550" y="102" text-anchor="middle" fill="#93c5fd" font-size="8.5" font-weight="700">HTTPS / 443</text>
+
+          <!-- ── LAYER 2: NIVEL DE ENTRADA ── -->
+          <rect x="60" y="118" width="980" height="148" rx="14" fill="rgba(30,58,138,.25)" stroke="rgba(59,130,246,.45)"
+            stroke-width="1.2" />
+          <text x="76" y="137" fill="rgba(147,197,253,.6)" font-size="8.5" font-weight="700"
+            letter-spacing=".08em">NIVEL DE ENTRADA</text>
+
+          <!-- Portal SSO box -->
+          <g filter="url(#i-card)">
+            <rect x="385" y="130" width="260" height="72" rx="12" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.5" />
+          </g>
+          <text x="515" y="155" text-anchor="middle" fill="white" font-size="11" font-weight="800">Portal SSO &amp;
+            Dashboard</text>
+          <text x="515" y="171" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="600">Autenticaci&#243;n ·
+            Routing · Sesi&#243;n JWT</text>
+          <rect x="425" y="179" width="180" height="16" rx="8" fill="rgba(59,130,246,.2)" />
+          <text x="515" y="191" text-anchor="middle" fill="#60a5fa" font-size="8" font-weight="700">PUNTO DE ENTRADA
+            &#218;NICO</text>
+
+          <!-- Auth Module box (left) -->
+          <g filter="url(#i-card)">
+            <rect x="85" y="152" width="200" height="58" rx="10" fill="#1e2b50" stroke="rgba(96,165,250,.4)"
+              stroke-width="1" />
+          </g>
+          <text x="185" y="175" text-anchor="middle" fill="white" font-size="10" font-weight="800">M&#243;dulo de
+            Autenticaci&#243;n</text>
+          <text x="185" y="190" text-anchor="middle" fill="#93c5fd" font-size="8.5">JWT · OAuth · Roles</text>
+          <!-- Arrow Portal → Auth -->
+          <path d="M 385,166 C 340,166 295,173 285,173" fill="none" stroke="#60a5fa" stroke-width="1.5"
+            marker-end="url(#i-arr-blue)" />
+          <rect x="306" y="157" width="74" height="14" rx="7" fill="rgba(30,58,138,.7)" />
+          <text x="343" y="168" text-anchor="middle" fill="#93c5fd" font-size="7.5" font-weight="700">Auth &amp;
+            Routing</text>
+
+          <!-- Dashboard box (right) -->
+          <g filter="url(#i-card)">
+            <rect x="820" y="152" width="200" height="58" rx="10" fill="#1e2b50" stroke="rgba(96,165,250,.4)"
+              stroke-width="1" />
+          </g>
+          <text x="920" y="175" text-anchor="middle" fill="white" font-size="10" font-weight="800">Dashboard
+            Principal</text>
+          <text x="920" y="190" text-anchor="middle" fill="#93c5fd" font-size="8.5">Vistas · Reportes · KPIs</text>
+          <!-- Arrow Portal → Dashboard -->
+          <path d="M 645,166 C 695,166 800,173 820,173" fill="none" stroke="#60a5fa" stroke-width="1.5"
+            marker-end="url(#i-arr-blue)" />
+          <rect x="722" y="157" width="74" height="14" rx="7" fill="rgba(30,58,138,.7)" />
+          <text x="759" y="168" text-anchor="middle" fill="#93c5fd" font-size="7.5"
+            font-weight="700">Redirecci&#243;n</text>
+
+          <!-- Arrow L2 → L3 -->
+          <path d="M 550,266 L 550,300" fill="none" stroke="rgba(52,211,153,.7)" stroke-width="1.8"
+            marker-end="url(#i-arr-green)" />
+          <rect x="506" y="275" width="88" height="16" rx="8" fill="rgba(6,95,70,.5)" />
+          <text x="550" y="287" text-anchor="middle" fill="#6ee7b7" font-size="8.5" font-weight="700">JWT Token /
+            Link</text>
+
+          <!-- ── LAYER 3: MÓDULOS DE NEGOCIO ── -->
+          <rect x="30" y="300" width="1040" height="100" rx="14" fill="rgba(16,185,129,.1)"
+            stroke="rgba(52,211,153,.35)" stroke-width="1.2" />
+          <text x="46" y="318" fill="rgba(110,231,183,.5)" font-size="8.5" font-weight="700"
+            letter-spacing=".08em">M&#211;DULOS DE NEGOCIO (APPS)</text>
+
+          <!-- Módulo Construcción -->
+          <rect x="55" y="320" width="155" height="68" rx="10" fill="#132650" stroke="rgba(59,130,246,.4)"
+            stroke-width="1" />
+          <text x="132" y="352" text-anchor="middle" fill="white" font-size="9.5" font-weight="800">M&#243;dulo</text>
+          <text x="132" y="366" text-anchor="middle" fill="#93c5fd" font-size="9"
+            font-weight="700">Construcci&#243;n</text>
+
+          <!-- Módulo Logística -->
+          <rect x="253" y="320" width="155" height="68" rx="10" fill="#132650" stroke="rgba(99,102,241,.4)"
+            stroke-width="1" />
+          <text x="330" y="352" text-anchor="middle" fill="white" font-size="9.5" font-weight="800">M&#243;dulo</text>
+          <text x="330" y="366" text-anchor="middle" fill="#a5b4fc" font-size="9"
+            font-weight="700">Log&#237;stica</text>
+
+          <!-- Módulo Control Flota -->
+          <rect x="451" y="320" width="170" height="68" rx="10" fill="#132650" stroke="rgba(245,158,11,.4)"
+            stroke-width="1" />
+          <text x="536" y="352" text-anchor="middle" fill="white" font-size="9.5" font-weight="800">M&#243;dulo</text>
+          <text x="536" y="366" text-anchor="middle" fill="#fcd34d" font-size="9" font-weight="700">Control Flota</text>
+
+          <!-- Módulo Órdenes de Pago -->
+          <rect x="664" y="320" width="170" height="68" rx="10" fill="#132650" stroke="rgba(16,185,129,.4)"
+            stroke-width="1" />
+          <text x="749" y="352" text-anchor="middle" fill="white" font-size="9.5" font-weight="800">M&#243;dulo</text>
+          <text x="749" y="366" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="700">&#211;rdenes de
+            Pago</text>
+
+          <!-- Módulo RRHH -->
+          <rect x="877" y="320" width="155" height="68" rx="10" fill="#132650" stroke="rgba(167,139,250,.4)"
+            stroke-width="1" />
+          <text x="954" y="352" text-anchor="middle" fill="white" font-size="9.5" font-weight="800">M&#243;dulo</text>
+          <text x="954" y="366" text-anchor="middle" fill="#c4b5fd" font-size="9" font-weight="700">RRHH</text>
+
+          <!-- Horizontal Link/Token bar through modules -->
+          <line x1="55" y1="354" x2="1032" y2="354" stroke="rgba(96,165,250,.2)" stroke-width="1.2"
+            stroke-dasharray="6,4" />
+
+          <!-- Arrows L3 → L4 (dashed) -->
+          <path d="M 190,400 C 188,428 250,440 252,452" fill="none" stroke="rgba(96,165,250,.5)" stroke-width="1.4"
+            stroke-dasharray="4,3" marker-end="url(#i-arr-blue)" />
+          <path d="M 536,400 C 536,428 545,440 546,452" fill="none" stroke="rgba(52,211,153,.5)" stroke-width="1.4"
+            stroke-dasharray="4,3" marker-end="url(#i-arr-green)" />
+          <path d="M 895,400 C 892,428 844,440 842,452" fill="none" stroke="rgba(167,139,250,.6)" stroke-width="1.4"
+            stroke-dasharray="4,3" marker-end="url(#i-arr-wh)" />
+
+          <!-- ── LAYER 4: CAPA DE DATOS ── -->
+          <rect x="60" y="452" width="980" height="112" rx="14" fill="rgba(15,23,42,.7)" stroke="rgba(167,139,250,.25)"
+            stroke-width="1.2" />
+          <text x="76" y="468" fill="rgba(196,181,253,.45)" font-size="8.5" font-weight="700"
+            letter-spacing=".08em">CAPA DE DATOS &amp; SERVICIOS</text>
+
+          <!-- PostgreSQL cylinder -->
+          <ellipse cx="252" cy="490" rx="68" ry="13" fill="#1e40af" />
+          <rect x="184" y="490" width="136" height="52" fill="#1e3a8a" />
+          <ellipse cx="252" cy="542" rx="68" ry="13" fill="#1e308a" />
+          <text x="252" y="510" text-anchor="middle" fill="white" font-size="9" font-weight="800">PostgreSQL</text>
+          <text x="252" y="524" text-anchor="middle" fill="#93c5fd" font-size="8">Usuarios / Auth</text>
+          <text x="252" y="538" text-anchor="middle" fill="#93c5fd" font-size="7.5">Registros de Identidad</text>
+
+          <!-- Supabase cylinder -->
+          <ellipse cx="550" cy="490" rx="68" ry="13" fill="#059669" />
+          <rect x="482" y="490" width="136" height="52" fill="#065f46" />
+          <ellipse cx="550" cy="542" rx="68" ry="13" fill="#054f3a" />
+          <text x="550" y="510" text-anchor="middle" fill="white" font-size="9" font-weight="800">Supabase</text>
+          <text x="550" y="524" text-anchor="middle" fill="#6ee7b7" font-size="8">Gesti&#243;n Operativa</text>
+          <text x="550" y="538" text-anchor="middle" fill="#6ee7b7" font-size="7.5">API Real-time · Storage</text>
+
+          <!-- Flota DB cylinder -->
+          <ellipse cx="848" cy="490" rx="68" ry="13" fill="#d97706" />
+          <rect x="780" y="490" width="136" height="52" fill="#92400e" />
+          <ellipse cx="848" cy="542" rx="68" ry="13" fill="#78350f" />
+          <text x="848" y="510" text-anchor="middle" fill="white" font-size="9" font-weight="800">Base de Datos
+            Flota</text>
+          <text x="848" y="524" text-anchor="middle" fill="#fcd34d" font-size="8">GPS · Mantenci&#243;n</text>
+          <text x="848" y="538" text-anchor="middle" fill="#fcd34d" font-size="7.5">Hist&#243;rico Veh&#237;culos</text>
+        </svg>
+      </div><!-- /infra-diagram -->
+
+      <div class="arch-desc reveal reveal-delay-2">
+        <strong>Diagrama Operativo:</strong> SSO como hub central distribuye identidad y roles a los 5 m&#243;dulos, que
+        convergen en Producci&#243;n con datos de presupuesto, materiales, maquinaria y personal.
+        <strong> Infraestructura:</strong> Portal SSO enrut&#243; a Auth/Dashboard, los m&#243;dulos consumen APIs y
+        persisten en PostgreSQL, Supabase y BD Flota.
+      </div>
+    </div>
+    <script>
+      (function () {
+        var btns = document.querySelectorAll('.arch-tab-btn');
+        btns.forEach(function (b) {
+          b.addEventListener('click', function () {
+            btns.forEach(function (x) { x.classList.remove('active'); });
+            b.classList.add('active');
+            document.querySelectorAll('.erp-canvas-wrap,.infra-canvas-wrap').forEach(function (el) { el.classList.remove('active'); });
+            document.getElementById(b.dataset.target).classList.add('active');
+          });
+        });
+      })();
+    </script>
+  </section>
+
+  <!-- ═══ SECCIÓN 3: EL PROBLEMA ═══ -->
+  <section id="problema">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Alineación Estratégica</span>
+        <h2 class="section-title">El Problema de la <em>Caja Negra</em> (SaaS)</h2>
+        <p class="section-subtitle">El software SaaS estándar obliga a Somyl a adaptar su operación al producto.
+          <strong>Mi propuesta invierte esa lógica: construir software adaptado 100% a Somyl.</strong>
+        </p>
+        <div class="divider"></div>
+      </div>
+      <div class="contrast-grid">
+        <div class="contrast-card card-saas reveal reveal-delay-1">
+          <span class="card-badge badge-red">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+            Modelo Tradicional (SaaS Externo)
+          </span>
+          <h3>Rigidez y Costos<br />Difíciles de Controlar</h3>
+          <p class="desc">Los gigantes de la industria proveen herramientas cerradas, asumiendo que el cliente acomodará
+            sus procesos al sistema.</p>
+          <div class="pain-item">
+            <div class="icon-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg></div>
+            <span><strong>Cobros ocultos recurrentes:</strong> Pago mensual adicional por cada nuevo usuario.</span>
+          </div>
+          <div class="pain-item">
+            <div class="icon-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg></div>
+            <span><strong>Rigidez operativa:</strong> Es imposible agregar funcionalidades específicas de la
+              empresa.</span>
+          </div>
+          <div class="pain-item">
+            <div class="icon-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg></div>
+            <span><strong>Inversión inicial riesgosa:</strong> Obliga a contratar horas de "consultoría".</span>
+          </div>
+          <div class="pain-item">
+            <div class="icon-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg></div>
+            <span><strong>Soporte burocrático:</strong> Meses para un ajuste o ticket. Indefensión frente al
+              proveedor.</span>
+          </div>
+        </div>
+        <div class="contrast-card card-custom reveal reveal-delay-2">
+          <div class="glow-corner"></div>
+          <span class="card-badge badge-green">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Mi Propuesta — Ecosistema Somyl
+          </span>
+          <h3>Agilidad Extrema<br />y Costo Marginal Cero</h3>
+          <p class="desc">Un ecosistema operativo moldeado exactamente sobre la forma real en la que Somyl procesa
+            información.</p>
+          <div class="gain-item">
+            <div class="icon-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+              </svg></div>
+            <span><strong>ADN Somyl 100%:</strong> Desarrollado desde adentro. Si el terreno cambia, la app cambia de
+              inmediato.</span>
+          </div>
+          <div class="gain-item">
+            <div class="icon-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+              </svg></div>
+            <span><strong><span class="gain-highlight">Cero</span> costo por asientos:</strong> Todos los operarios
+              pueden conectarse sin restricciones.</span>
+          </div>
+          <div class="gain-item">
+            <div class="icon-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+              </svg></div>
+            <span><strong>Desarrollo ágil in-house:</strong> Identificamos un nuevo dolor y lo implemento como mejora a
+              la brevedad.</span>
+          </div>
+          <div class="gain-item">
+            <div class="icon-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+              </svg></div>
+            <span><strong>Propiedad soberana:</strong> Bases de datos, arquitecturas y flujos bajo el control exclusivo
+              de Somyl.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECCIÓN 4: ROI ═══ -->
+  <section id="roi">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Análisis Financiero & Proyección</span>
+        <h2 class="section-title">Retorno de <em>Inversión</em> (ROI)</h2>
+        <p class="section-subtitle">Comparativa financiera y funcional para 5 usuarios base. Los números hablan solos al
+          momento de decidir el futuro tecnológico de Somyl.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="roi-wrapper reveal reveal-delay-1">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:28%">Concepto</th>
+              <th class="highlight" style="text-align:center">
+                Softland<br />
+                <span style="color:rgba(255,255,255,.8); font-size:10px; font-weight:normal; text-transform:none;">(Cot.
+                  3 modulos basicos)</span>
+              </th>
+              <th class="highlight" style="text-align:center; background:#1e40af">
+                Defontana<br />
+                <span style="color:rgba(255,255,255,.8); font-size:10px; font-weight:normal; text-transform:none;">(Cot.
+                  3 modulos basicos)</span>
+              </th>
+              <th class="highlight" style="text-align:center; background:#475569">
+                Agencia de Software<br />
+                <span
+                  style="color:rgba(255,255,255,.8); font-size:10px; font-weight:normal; text-transform:none;">(Desarrollo
+                  a Medida Externo)</span>
+              </th>
+              <th class="highlight2">Mi Propuesta<br />(Ecosistema Somyl)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Implementación</strong> (Inversión Inicial)</td>
+              <td class="col-red">$8.200.000</td>
+              <td class="col-amber">$4.100.000</td>
+              <td class="col-red" style="font-size:.8rem;">~$35.000.000<br /><span
+                  style="font-size:.65rem; color:#64748b; font-weight:normal;">(Agencia externa, 5 módulos)</span></td>
+              <td class="col-green">$0<br /><span style="font-size:.65rem; color:#059669; font-weight:normal;">Ya
+                  diseñado y operativo</span></td>
+            </tr>
+            <tr>
+              <td><strong>Suscripción / Soporte</strong> (Base 5 usuarios)</td>
+              <td class="col-red">$260.000 / mes</td>
+              <td class="col-amber">$210.000 / mes</td>
+              <td class="col-red" style="font-size:.8rem;">~$800.000 / mes<br /><span
+                  style="font-size:.65rem; color:#64748b; font-weight:normal;">(SLA: Servidor, Bugs y Soporte Técnico
+                  base)</span></td>
+              <td class="col-green" style="color:#0f172a;">$700.000 / mes<br /><span
+                  style="font-size:.65rem; color:#059669; font-weight:bold;">Honorarios Mantenimiento /
+                  Desarrollo</span></td>
+            </tr>
+            <tr>
+              <td><strong>Costo Anual</strong> de Operación</td>
+              <td class="col-red">$3.120.000</td>
+              <td class="col-amber">$2.520.000</td>
+              <td class="col-red">$9.600.000</td>
+              <td class="col-green" style="color:#0f172a;">$8.400.000</td>
+            </tr>
+            <tr>
+              <td><strong>Crecimiento: Usuario adicional</strong></td>
+              <td class="col-red">Tarifa extra / mes</td>
+              <td class="col-amber">Tarifa extra / mes</td>
+              <td class="col-green">Sin costo adicional<br /><span
+                  style="font-size:.65rem; color:#059669; font-weight:normal;">(Cobro es solo Mantenimiento/SLA)</span>
+              </td>
+              <td class="col-green">Sin costo adicional</td>
+            </tr>
+            <tr>
+              <td><strong>Modificaciones & Agilidad</strong></td>
+              <td class="col-center" style="font-weight:700; color:#ef4444; font-size:.75rem;">Burocrático<br /><span
+                  style="font-size:.65rem; font-weight:normal; color:#64748b;">(Ticket soporte / No factible)</span>
+              </td>
+              <td class="col-center" style="font-weight:700; color:#f59e0b; font-size:.75rem;">Burocrático<br /><span
+                  style="font-size:.65rem; font-weight:normal; color:#64748b;">(Ticket soporte / No factible)</span>
+              </td>
+              <td class="col-center" style="font-weight:700; color:#ef4444; font-size:.75rem;">Lento y Caro<br /><span
+                  style="font-size:.65rem; font-weight:normal; color:#64748b;">(Cotización por horas UF)</span></td>
+              <td class="col-green" style="font-size:.75rem;">Ágil<br /><span
+                  style="font-size:.65rem; font-weight:normal; color:#059669;">(Ajustes incluidos en fee mensual)</span>
+              </td>
+            </tr>
+            <tr style="background:#f1f5f9; border-top: 2px solid #cbd5e1;">
+              <td style="font-weight:800; color:#0f172a;">COSTO TOTAL AÑO 1</td>
+              <td style="text-align:center; font-weight:800; color:#dc2626; font-size:1rem;">$11.320.000</td>
+              <td style="text-align:center; font-weight:800; color:#d97706; font-size:1rem;">$6.620.000</td>
+              <td style="text-align:center; font-weight:800; color:#dc2626; font-size:1rem;">$44.600.000</td>
+              <td style="text-align:center; font-weight:800; color:#059669; font-size:1.1rem;">$8.400.000</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion-box reveal reveal-delay-2">
+        <div class="conclusion-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+        </div>
+        <p class="conclusion-text">
+          <strong>Conclusión:</strong> Un SaaS como Softland te arrienda herramientas rígidas y genéricas. <strong>La
+            diferencia de precio con mi propuesta paga el valor incalculable de tener un desarrollador
+            <em>in-house</em>:</strong> alguien que adapta el ecosistema a los procesos reales de la empresa, resuelve
+          urgencias al instante y construye nuevos módulos sin cobrarte licencias por usuario. Es la diferencia
+          operativa entre arrendar una caja negra limitante, o invertir en la propia ventaja competitiva de Somyl.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ═══ SECCIÓN 6: OPCIONES ═══ -->
+  <section id="opciones">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Propuesta</span>
+        <h2 class="section-title">Formalizaci&#243;n <em>Estrat&#233;gica</em></h2>
+        <p class="section-subtitle">Dos caminos de inversi&#243;n. Ambos aseguran la continuidad del ecosistema digital
+          de Somyl.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="pricing-grid">
+        <!-- OPCIÓN A -->
+        <div class="pricing-card pricing-card-a reveal reveal-delay-1">
+          <div class="pricing-option">Opción A</div>
+          <div class="pricing-title">Continuidad de Rol<br />y Licenciamiento Externo</div>
+          <div class="pricing-salary"><sup>+</sup>$500.000</div>
+          <div class="pricing-salary-label">Ajuste salarial mensual</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-cargo">Cargo: Jefe de Desarrollo y Sistemas</div>
+          <ul class="pricing-list">
+            <li>
+              <div class="pill-check pill-check-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Continuidad del ecosistema actual con soporte y desarrollo evolutivo para futuros requerimientos o módulos
+              (Solo para empresa Somyl).
+            </li>
+            <li>
+              <div class="pill-check pill-check-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Mantenimiento de todos los módulos operativos existentes.
+            </li>
+            <li>
+              <div class="pill-check pill-check-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Administración de la infraestructura de datos y seguridad.
+            </li>
+          </ul>
+          <div class="pricing-warning">
+            <strong>Condición de propiedad:</strong> La propiedad intelectual del código (histórico y futuro) se
+            mantiene a derecho del autor. La empresa obtiene únicamente una <strong>licencia de uso no
+              exclusiva</strong>.
+          </div>
+        </div>
+        <!-- OPCIÓN B -->
+        <div class="pricing-card pricing-card-b reveal reveal-delay-2">
+          <div class="pricing-glow"></div>
+          <span class="pricing-recommended">★ Recomendada</span>
+          <div class="pricing-option">Opción B</div>
+          <div class="pricing-title">Adquisición de Activos<br />y Compromiso a Largo Plazo</div>
+          <div class="pricing-salary"><sup>+</sup>$700.000</div>
+          <div class="pricing-salary-label">Ajuste salarial mensual</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-cargo">Cargo: Jefe de Desarrollo y Sistemas</div>
+          <ul class="pricing-list">
+            <li>
+              <div class="pill-check pill-check-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <strong>Cesión total</strong> de la propiedad intelectual y código fuente a nombre de Somyl.
+            </li>
+            <li>
+              <div class="pill-check pill-check-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Acceso y documentación completa de toda la arquitectura del sistema.
+            </li>
+            <li>
+              <div class="pill-check pill-check-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Evolución continua de los módulos con ciclos de desarrollo ágil.
+            </li>
+            <li>
+              <div class="pill-check pill-check-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <strong>Cláusula de permanencia a 36 meses</strong> con garantía de estabilidad operativa.
+            </li>
+          </ul>
+          <div class="pricing-guarantee">
+            <strong>Garantía de Estabilidad:</strong> En caso de desvinculación anticipada por parte de la empresa, se
+            activa una <strong>indemnización por adquisición de software de $10.000.000</strong>, reconociendo el valor
+            del activo intangible transferido.
+          </div>
+        </div>
+        <!-- OPCIÓN C -->
+        <div class="pricing-card pricing-card-c reveal reveal-delay-3">
+          <div class="pricing-option">Opción C</div>
+          <div class="pricing-title">Adquisición "As-Is"<br />(Venta Total del Software)</div>
+          <div class="pricing-salary"><sup>$</sup>7.800.000</div>
+          <div class="pricing-salary-label">Pago único de transferencia rápida</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-cargo">Propiedad: Total de Somyl</div>
+          <ul class="pricing-list">
+            <li>
+              <div class="pill-check pill-check-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <strong>Traspaso total:</strong> Entrega de la propiedad intelectual, código fuente completo y bases de
+              datos.
+            </li>
+            <li>
+              <div class="pill-check pill-check-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <strong>Cero ataduras:</strong> Somyl recibe el sistema en propiedad absoluta sin dependencias mensuales.
+            </li>
+            <li>
+              <div class="pill-check pill-check-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Ahorro abismal frente a una agencia ($35MM base).
+            </li>
+            <li>
+              <div class="pill-check pill-check-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              <strong>Soporte básico e implementación</strong> por 3 meses (sin mayores cambios).
+            </li>
+          </ul>
+          <div class="pricing-warning">
+            <strong>A tener en cuenta:</strong> El sistema se entrega "como está" (as-is). Sin un perfil interno, la
+            empresa asume el riesgo operativo del hosting, soporte en el día a día y futura evolución, debiendo recurrir
+            a agencias externas a costo por hora.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECCIÓN 7: CIERRE ═══ -->
+  <section id="cierre">
+    <div class="cierre-glow"></div>
+    <div class="container">
+      <div class="cierre-content reveal">
+        <div class="cierre-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <span class="cierre-tag">Llamado a la Acción</span>
+        <h2 class="cierre-title">
+          ¿Avanzamos hacia el futuro o<br /><em>volvemos al papel</em><br />y las planillas?
+        </h2>
+        <p class="cierre-desc">
+          Nuestro horizonte debe ser siempre la evaluación y la mejora continua. La pregunta es simple: ¿consolidamos un
+          ecosistema digital ágil que evolucione con los tiempos actuales, o retrocedemos al caos de los procesos
+          manuales y planillas desactualizadas?
+        </p>
+        <div class="cierre-actions">
+          <a href="#opciones" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Ver propuesta de inversión
+          </a>
+          <a href="#roi" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+            Revisar análisis ROI
+          </a>
+        </div>
+        <div class="cierre-footnote">
+          <div class="cierre-footer-row">
+            <span>Somyl</span>
+            <div class="cierre-divider"></div>
+            <span>Evolución Tecnológica 2026</span>
+            <div class="cierre-divider"></div>
+            <span>Marzo 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll progress bar
+    const bar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const max = document.body.scrollHeight - window.innerHeight;
+      bar.style.width = (window.scrollY / max * 100) + '%';
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Nav active state
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.style.color = '');
+          const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+          if (active) active.style.color = '#fff';
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => sectionObserver.observe(s));
+  </script>
+</body>
+
+</html>
